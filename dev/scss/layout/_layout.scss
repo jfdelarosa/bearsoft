@@ -1,0 +1,23 @@
+.container{
+  width: $container-width;
+  margin: 0 auto;
+}
+header{
+  background: linear-gradient(-45deg, $color-primary, $color-secondary);
+  padding: 4rem 0;
+  color: white;
+  h2{
+    width: 50%;
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 4rem 0;
+  }
+  .nav-services{
+    display: flex;
+    justify-content: center;
+    span{
+      padding: 0 0.5rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}

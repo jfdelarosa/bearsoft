@@ -1,0 +1,11 @@
+.nav{
+  display: flex;
+  justify-content: space-between;
+  &__left{}
+  &__right{}
+  &__element{
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+  }
+}
