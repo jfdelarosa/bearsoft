@@ -3,9 +3,17 @@
   margin: 0 auto;
 }
 header{
-  background: linear-gradient(-45deg, $color-primary, $color-secondary);
+  background: linear-gradient(-45deg, rgba($color-primary, 0.8), rgba($color-secondary, 0.8)), url('../assets/bg.jpeg');
+  background-size: cover;
+//  background: linear-gradient(-45deg, $color-primary, $color-secondary);
   padding: 5rem 0;
   color: white;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 5vw)
+  );
   h2{
     width: 50%;
     font-size: 3rem;
@@ -23,11 +31,25 @@ header{
 }
 
 .section{
-  background: #F5F5F5;
+  background: $section-bg;
   padding: 5rem;
+  &:first-of-type{
+    padding-top: 3rem;
+  }
 }
 section{
+  background: white;
   padding: 6rem 0;
+  &#portafolio{
+    .container{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+      .item img{
+        width: 100%;
+      }
+    }
+  }
   &#servicios{
     .container{
       width: 700px;

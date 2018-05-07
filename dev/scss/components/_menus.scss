@@ -1,8 +1,10 @@
 .nav{
   display: flex;
   justify-content: space-between;
-  &__left{}
-  &__right{}
+  align-items: center;
+  &__logo{
+    height: 2rem;
+  }
   &__element{
     color: white;
     text-decoration: none;
