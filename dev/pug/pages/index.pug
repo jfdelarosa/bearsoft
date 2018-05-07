@@ -1,4 +1,24 @@
 extends ../includes/template
 block main
-  h1 Hola mundo
-  p Proyecto funcionando
+  .section
+    .container
+      h2.section__title Páginas web
+      h3.section__subtitle Paginas web hechas a la medida
+  section#portafolio
+  .section
+    .container
+      h2.section__title Aplicaciones de escritorio
+      h3.section__subtitle subtitulo
+  section#servicios
+  .section
+    .container
+      h2.section__title Aplicaciones móviles
+      h3.section__subtitle subtitulo
+  footer
+    .cover
+      form.form.container
+        .form__grid
+          input.form__controller(type="text" name="nombre" placeholder="Nombre")
+          input.form__controller(type="email" name="correo" placeholder="correo@dominio.com")
+        textarea.form__controller(name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="6")
+        button.btn.btn-secondary(type="button") Enviar

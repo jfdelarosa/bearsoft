@@ -4,13 +4,13 @@
 }
 header{
   background: linear-gradient(-45deg, $color-primary, $color-secondary);
-  padding: 4rem 0;
+  padding: 5rem 0;
   color: white;
   h2{
     width: 50%;
     font-size: 3rem;
     font-weight: 600;
-    margin: 4rem 0;
+    margin: 5rem 0;
   }
   .nav-services{
     display: flex;
@@ -19,5 +19,30 @@ header{
       padding: 0 0.5rem;
       color: rgba(255, 255, 255, 0.8);
     }
+  }
+}
+
+.section{
+  background: #F5F5F5;
+  padding: 5rem;
+}
+section{
+  padding: 4rem 0;
+  &#contacto{
+    background:#a17c6b;
+    .container{
+      max-width: 700px;
+    }
+  }
+}
+
+footer{
+  background: url("../assets/footer.jpeg");
+  background-size: cover;
+  .cover{
+    padding: 6rem 0;
+    background: rgba(0,0,0,.05);
+    height: 100%;
+    position: relative;
   }
 }
