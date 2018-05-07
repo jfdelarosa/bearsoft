@@ -166,15 +166,34 @@ header .nav-services span{
 }
 
 section{
-  padding:4rem 0;
+  padding:6rem 0;
 }
 
-section#contacto{
-  background:#a17c6b;
+section#servicios .container{
+  width:700px;
+  -webkit-box-pack:justify;
+      -ms-flex-pack:justify;
+          justify-content:space-between;
 }
 
-section#contacto .container{
-  max-width:700px;
+section#servicios .container,section#servicios .item{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+}
+
+section#servicios .item{
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:column;
+          flex-direction:column;
+}
+
+section#servicios .item h3{
+  text-align:center;
 }
 
 footer{
