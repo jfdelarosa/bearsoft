@@ -6,8 +6,30 @@
     height: 2rem;
   }
   &__element{
-    color: white;
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     margin: 0 1rem;
+    position: relative;
+    font-weight: 600;
+    @include transition();
+    &:hover{
+      color: white;
+      &::after{
+        background: rgba(255, 255, 255, 0.6);
+        width: 70%;
+      }
+    }
+    &::after{
+      transition: all 0.25s ease-in-out;
+      content: "";
+      position: absolute;
+      display: table;
+      height: 2px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      bottom: -0.5rem;
+      width: 100%;
+    }
   }
 }

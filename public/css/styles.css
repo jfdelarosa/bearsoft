@@ -143,6 +143,10 @@ header{
           clip-path:polygon(0 0,100% 0,100% 100%,0 calc(100% - 5vw));
 }
 
+header img{
+  cursor:pointer;
+}
+
 header h2{
   width:50%;
   font-size:3rem;
@@ -162,6 +166,13 @@ header .nav-services{
 header .nav-services span{
   padding:0 .5rem;
   color:hsla(0,0%,100%,.8);
+  webkit-transition:all .25s ease-in-out;
+  transition:all .25s ease-in-out;
+  cursor:pointer;
+}
+
+header .nav-services span:hover{
+  color:hsla(0,0%,100%,.9);
 }
 
 .section{
@@ -180,19 +191,16 @@ header .nav-services span{
 
 .section.quienes-somos .container{
   background-image:url(../assets/sections/quienes-somos.png);
-  background-position-y:0;
   background-size:15rem;
 }
 
 .section.contacto .container{
   background-image:url(../assets/sections/contacto.png);
-  background-position-y:1rem;
   background-size:15rem;
 }
 
 .section.servicios .container{
   background-image:url(../assets/sections/servicios.png);
-  background-position-y:bottom;
   background-size:21rem;
 }
 
@@ -392,9 +400,35 @@ footer .cover{
 }
 
 .nav__element{
-  color:#fff;
+  color:hsla(0,0%,100%,.9);
   text-decoration:none;
   margin:0 1rem;
+  position:relative;
+  font-weight:600;
+  webkit-transition:all .25s ease-in-out;
+  transition:all .25s ease-in-out;
+}
+
+.nav__element:hover{
+  color:#fff;
+}
+
+.nav__element:hover:after{
+  background:hsla(0,0%,100%,.6);
+  width:70%;
+}
+
+.nav__element:after{
+  transition:all .25s ease-in-out;
+  content:"";
+  position:absolute;
+  display:table;
+  height:2px;
+  margin:0 auto;
+  left:0;
+  right:0;
+  bottom:-.5rem;
+  width:100%;
 }
 
 .form{

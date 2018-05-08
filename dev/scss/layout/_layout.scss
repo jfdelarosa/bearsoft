@@ -5,7 +5,6 @@
 header{
   background: linear-gradient(-45deg, rgba($color-primary, 0.8), rgba($color-secondary, 0.8)), url('../assets/bg.jpeg');
   background-size: cover;
-//  background: linear-gradient(-45deg, $color-primary, $color-secondary);
   padding: 5rem 0;
   color: white;
   clip-path: polygon(
@@ -14,6 +13,9 @@ header{
     100% 100%,
     0 calc(100% - 5vw)
   );
+  img{
+    cursor: pointer;
+  }
   h2{
     width: 50%;
     font-size: 3rem;
@@ -26,6 +28,11 @@ header{
     span{
       padding: 0 0.5rem;
       color: rgba(255, 255, 255, 0.8);
+      @include transition();
+      cursor: pointer;
+      &:hover{
+        color: rgba(255, 255, 255, 0.9);
+      }
     }
   }
 }
@@ -42,17 +49,14 @@ header{
   }
   &.quienes-somos .container{
     background-image: url("../assets/sections/quienes-somos.png");
-    background-position-y: 0;
     background-size: 15rem;
   }
   &.contacto .container{
     background-image: url("../assets/sections/contacto.png");
-    background-position-y: 1rem;
     background-size: 15rem;
   }
   &.servicios .container{
     background-image: url("../assets/sections/servicios.png");
-    background-position-y: bottom;
     background-size: 21rem;
   }
 }

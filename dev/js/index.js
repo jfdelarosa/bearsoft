@@ -1,3 +1,3 @@
-import {hello} from "./modules/example";
+import parallax from "./modules/parallax";
 
-hello();
+parallax();
