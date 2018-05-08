@@ -32,14 +32,46 @@ header{
 
 .section{
   background: $section-bg;
-  padding: 5rem;
-  &:first-of-type{
+  .container{
+    padding: 4rem 0;
+    background-repeat: no-repeat;
+    background-position-x: right;
+  }
+  &:first-of-type .container{
     padding-top: 3rem;
+  }
+  &.quienes-somos .container{
+    background-image: url("../assets/sections/quienes-somos.png");
+    background-position-y: 0;
+    background-size: 15rem;
+  }
+  &.contacto .container{
+    background-image: url("../assets/sections/contacto.png");
+    background-position-y: 1rem;
+    background-size: 15rem;
+  }
+  &.servicios .container{
+    background-image: url("../assets/sections/servicios.png");
+    background-position-y: bottom;
+    background-size: 21rem;
   }
 }
 section{
   background: white;
   padding: 6rem 0;
+  &#about{
+    .container{
+      width: 700px;
+    }
+    p{
+      font-size: 1.3rem;
+      font-weight: 300;
+      line-height: 3rem;
+      text-align: justify;
+      color: #6c665c;
+      margin: 0;
+    }
+  }
   &#portafolio{
     .container{
       display: grid;

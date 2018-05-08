@@ -1,9 +1,16 @@
 extends ../includes/template
 block main
+  .section.quienes-somos
+    .container
+      h2.section__title ¿Quiénes somos?
+      h3.section__subtitle Nuestros trabajos anteriores
+  section#about
+    .container
+      p Bearsoft es una empresa dedicada al desarrollo de soluciones efectivas y que busca estar en constante actualización para ofrecer el mejor servicio en la solución de problemas mediante la implementación de Sitios Web, Sistemas y Software en general.
   .section
     .container
-      h2.section__title Páginas web
-      h3.section__subtitle Paginas web hechas a la medida
+      h2.section__title Portafolio
+      h3.section__subtitle Nuestros trabajos anteriores
   section#portafolio
     .container
       .item
@@ -19,9 +26,9 @@ block main
       .item
         img(src="./assets/portafolio/apro.png")
 
-  .section
+  .section.servicios
     .container
-      h2.section__title Aplicaciones de escritorio
+      h2.section__title Nuestros servicios
       h3.section__subtitle subtitulo
   section#servicios
     .container
@@ -37,10 +44,10 @@ block main
       .item
         img(src="https://cdn4.iconfinder.com/data/icons/web-development-5/500/clean-code-window-128.png")
         h3 Titulo
-  .section
+  .section.contacto
     .container
-      h2.section__title Aplicaciones móviles
-      h3.section__subtitle subtitulo
+      h2.section__title Contacto
+      h3.section__subtitle Pregunta acerca de nuestros precios
   footer
     .cover
       form.form.container
