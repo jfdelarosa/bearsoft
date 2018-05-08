@@ -18,13 +18,13 @@ Object.defineProperty(exports, "__esModule", {
 
 exports.default = function () {
   window.addEventListener("scroll", function () {
-    var offset = 150,
+    var offset = 200,
         constante = 2;
     var offsetY = window.pageYOffset + offset;
     document.querySelectorAll(".section .container").forEach(function (el, index, array) {
       var limit = el.offsetTop + el.offsetHeight + offset;
       if (offsetY > el.offsetTop && offsetY <= limit) {
-        el.style.backgroundPositionY = (offsetY - el.offsetTop) / constante + "px";
+        el.style.backgroundPositionY = "calc(1rem + " + (offsetY - el.offsetTop) / constante + "px)";
       } else {
         el.style.backgroundPositionY = "1rem";
       }

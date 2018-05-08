@@ -190,18 +190,23 @@ header .nav-services span:hover{
 }
 
 .section.quienes-somos .container{
-  background-image:url(../assets/sections/quienes-somos.png);
+  background-image:url(../assets/sections/quienes-somos.svg);
   background-size:15rem;
 }
 
-.section.contacto .container{
-  background-image:url(../assets/sections/contacto.png);
-  background-size:15rem;
+.section.portafolio .container{
+  background-image:url(../assets/sections/portafolio.svg);
+  background-size:14rem;
 }
 
 .section.servicios .container{
-  background-image:url(../assets/sections/servicios.png);
+  background-image:url(../assets/sections/servicios.svg);
   background-size:21rem;
+}
+
+.section.contacto .container{
+  background-image:url(../assets/sections/contacto.svg);
+  background-size:15rem;
 }
 
 section{
