@@ -244,6 +244,9 @@ section#servicios .container{
   -webkit-box-pack:justify;
       -ms-flex-pack:justify;
           justify-content:space-between;
+  -webkit-box-align:start;
+      -ms-flex-align:start;
+          align-items:flex-start;
 }
 
 section#servicios .container,section#servicios .item{
@@ -266,6 +269,52 @@ section#servicios .item h3{
   text-align:center;
 }
 
+section#servicios .plan{
+  box-shadow:0 0 27px rgba(0,0,0,.1);
+  border-radius:1rem;
+  padding:2rem;
+  text-align:center;
+  position:relative;
+  background:#fff;
+  width:33%;
+}
+
+section#servicios .plan:first-of-type{
+  border-radius:1rem 0 0 1rem;
+}
+
+section#servicios .plan:last-of-type{
+  border-radius:0 1rem 1rem 0;
+}
+
+section#servicios .plan.best{
+  width:34%;
+  z-index:1;
+  top:-1.5rem;
+}
+
+section#servicios .plan ul{
+  padding-left:1.5rem;
+}
+
+section#servicios .plan ul li{
+  position:relative;
+  list-style:none;
+  text-align:left;
+  padding:.4rem 0;
+  color:#6c757d;
+}
+
+section#servicios .plan ul li:after{
+  content:"\2713";
+  color:#1b9ed0;
+  background-color:transparent;
+  position:absolute;
+  left:-1.5rem;
+  top:.48rem;
+  font-weight:600;
+}
+
 footer{
   background:url(../assets/footer.jpeg);
   background-size:cover;
@@ -283,9 +332,11 @@ footer .cover{
   border-radius:4px;
   padding:1rem 2rem;
   cursor:pointer;
+  text-decoration:none;
 }
 
 .btn.btn-block{
+  display:block;
   width:100%;
 }
 

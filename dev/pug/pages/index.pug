@@ -31,7 +31,7 @@ block main
       h2.section__title Nuestros servicios
       h3.section__subtitle subtitulo
   section#servicios
-    .container
+    //- .container
       .item
         img(src="https://cdn4.iconfinder.com/data/icons/web-development-5/500/responsive-layout-screen-128.png")
         h3 Diseño
@@ -44,11 +44,40 @@ block main
       .item
         img(src="https://cdn4.iconfinder.com/data/icons/web-development-5/500/clean-code-window-128.png")
         h3 Titulo
+    .pricing.container
+      .plan
+        img(src="https://cdn4.iconfinder.com/data/icons/web-development-5/500/responsive-layout-screen-128.png")
+        h3 Pagina sencilla
+        p3 Solución básica para sitios web estáticos
+        ul
+          li 2 GB de amacenamiento
+          li 10 cuentas de correo
+          li dominio (.com, .net, .org, etc)
+        a.btn.btn-block.btn-secondary(href="#contacto") contacto
+      .plan.best
+        img(src="https://cdn4.iconfinder.com/data/icons/web-development-5/500/browser-web-content-128.png")
+        h3 Pagina web Autoadministrable
+        p3 Solución perfecta para sitio web autoadministrable
+        ul
+          li Acceso al panel administrativo
+          li 8 GB de amacenamiento
+          li 20 cuentas de correo
+          li dominio (.com, .net, .org, etc)
+        a.btn.btn-block.btn-primary(href="#contacto") contacto
+      .plan
+        img(src="https://cdn4.iconfinder.com/data/icons/web-development-5/500/clean-code-window-128.png")
+        h3 Aplicación
+        p3 Aplicaciones web o de escritorio desarrolladas a la medida
+        ul
+          li Desarrollo a la medida
+          li Amacenamiento ilimitado
+          li Cuentas de correo ilimitadas
+        a.btn.btn-block.btn-secondary(href="#contacto") contacto
   .section.contacto
     .container
       h2.section__title Contacto
       h3.section__subtitle Pregunta acerca de nuestros precios
-  footer
+  footer#contacto
     .cover
       form.form.container
         .form__grid
