@@ -188,7 +188,7 @@ header .nav-services span:hover{
   padding-top:3rem;
 }
 
-.section.quienes-somos .container{
+.section.about .container{
   background-image:url(../assets/sections/quienes-somos.svg);
   background-size:15rem;
 }
@@ -520,7 +520,7 @@ footer .cover{
   transition:all .25s ease-in-out;
   content:"";
   position:absolute;
-  display:table;
+  display:block;
   height:2px;
   margin:0 auto;
   left:0;
