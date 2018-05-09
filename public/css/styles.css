@@ -229,8 +229,52 @@ section#portafolio .container{
   grid-gap:1rem;
 }
 
+section#portafolio .container .item{
+  position:relative;
+}
+
 section#portafolio .container .item img{
   width:100%;
+  height:100%;
+}
+
+section#portafolio .container .item .cover{
+  background:linear-gradient(-45deg,#1b9ed0,#16d28b);
+  position:absolute;
+  opacity:.95;
+  top:0;
+  left:0;
+  text-align:center;
+  width:100%;
+  height:100%;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-pack:space-evenly;
+      -ms-flex-pack:space-evenly;
+          justify-content:space-evenly;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:column;
+          flex-direction:column;
+  color:#fff;
+  text-shadow:0 2px 0 rgba(0,0,0,.3);
+  text-decoration:none;
+  transition:all .25s ease-in-out;
+}
+
+section#portafolio .container .item .cover:hover{
+  text-shadow:none;
+  opacity:.7;
+  cursor:pointer;
+}
+
+section#portafolio .container .item .cover span{
+  letter-spacing:1px;
+  font-weight:600;
 }
 
 section#servicios{
@@ -339,6 +383,11 @@ footer .cover{
   width:100%;
 }
 
+.btn.btn-small{
+  padding:.5rem 1rem;
+  font-weight:400;
+}
+
 .btn.btn-white{
   background-color:#fff;
   border-color:#fff;
@@ -358,17 +407,16 @@ footer .cover{
 
 .btn.btn-white.btn-outline{
   background-color:transparent;
-  color:#fff !important;
+  color:#fff;
 }
 
 .btn.btn-white.btn-outline:hover{
-  color:#e6e6e6;
-  border-color:#e6e6e6;
+  background:#fff;
+  color:#555 !important;
 }
 
 .btn.btn-white.btn-outline:active{
-  color:#ccc;
-  border-color:#ccc;
+  opacity:.9;
 }
 
 .btn.btn-primary{
@@ -390,17 +438,16 @@ footer .cover{
 
 .btn.btn-primary.btn-outline{
   background-color:transparent;
-  color:#1b9ed0 !important;
+  color:#1b9ed0;
 }
 
 .btn.btn-primary.btn-outline:hover{
-  color:#157ca3;
-  border-color:#157ca3;
+  background:#1b9ed0;
+  color:#555 !important;
 }
 
 .btn.btn-primary.btn-outline:active{
-  color:#0f5976;
-  border-color:#0f5976;
+  opacity:.9;
 }
 
 .btn.btn-secondary{
@@ -422,17 +469,16 @@ footer .cover{
 
 .btn.btn-secondary.btn-outline{
   background-color:transparent;
-  color:#16d28b !important;
+  color:#16d28b;
 }
 
 .btn.btn-secondary.btn-outline:hover{
-  color:#11a46c;
-  border-color:#11a46c;
+  background:#16d28b;
+  color:#555 !important;
 }
 
 .btn.btn-secondary.btn-outline:active{
-  color:#0c764e;
-  border-color:#0c764e;
+  opacity:.9;
 }
 
 .nav{
