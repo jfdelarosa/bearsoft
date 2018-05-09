@@ -52,11 +52,7 @@ header{
     background-size: 15rem;
   }
   &.portafolio .container{
-    background-image: url("../assets/sections/portafolio.svg");
-    background-size: 14rem;
-  }
-  &.servicios .container{
-    background-image: url("../assets/sections/servicios.svg");
+    background-image: url("../assets/sections/responsive.svg");
     background-size: 21rem;
   }
   &.contacto .container{
@@ -91,58 +87,61 @@ section{
     }
   }
   &#servicios{
+    background-image: url("../assets/pattern.svg");
+    background-size: 6rem;
+    background-attachment: fixed;
     .container{
       width: 700px;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-    }
-    .item{
-      display: flex;
       align-items: center;
-      flex-direction: column;
-      h3{
+      .plan{
+        $posY: 0.8;
+        $posX: 1.5;
+        box-shadow: 0 0 27px rgba(0, 0, 0, 0.2);
+        border-radius: 1rem;
+        padding: 3rem 2rem 2rem 2rem;
         text-align: center;
-      }
-    }
-    .plan{
-      box-shadow: 0 0 27px rgba(0, 0, 0, 0.1);
-      border-radius: 1rem;
-      padding: 2rem;
-      text-align: center;
-      position: relative;
-      background: white;
-      width: 33%;
-      &:first-of-type{
-        border-radius: 1rem 0 0 1rem;
-      }
-      &:last-of-type{
-        border-radius: 0 1rem 1rem 0;
-      }
-      &.best{
-        width: 34%;
-        z-index: 2;
-        top: -1.5rem;
-        //padding: 3rem 2rem;
-      }
-      $posY: 0.8;
-      $posX: 1.5;
-      ul{
-        padding-left: $posX * 1rem;
-        li {
-          position: relative;
-          list-style: none;
-          text-align: left;
-          padding: $posY * 0.5rem 0;
-          color: $color-muted;
-          &:after {
-            content:'\2713';
-            color: $color-primary;
-            background-color: transparent;
-            position: absolute;
-            left: $posX * -1rem;
-            top: $posY * 0.6rem;
-            font-weight: 600;
+        position: relative;
+        background: white;
+        width: 33%;
+        transform: scale(1);
+        @include transition();
+        &:first-of-type{
+          border-radius: 1rem 0 0 1rem;
+        }
+        &:last-of-type{
+          border-radius: 0 1rem 1rem 0;
+        }
+        &:hover{
+          cursor: pointer;
+          transform: scale(1.05);
+        }
+        &.best{
+          width: 34%;
+          z-index: 2;
+        }
+        img{
+          width: 60%;
+        }
+        ul{
+          font-size: 0.8rem;
+          padding-left: $posX * 1rem;
+          li {
+            position: relative;
+            list-style: none;
+            text-align: left;
+            padding: $posY * 0.5rem 0;
+            color: $color-muted;
+            &:after {
+              content:'\2713';
+              color: $color-primary;
+              background-color: transparent;
+              position: absolute;
+              left: $posX * -1rem;
+              top: $posY * 0.6em;
+              font-weight: 600;
+            }
           }
         }
       }

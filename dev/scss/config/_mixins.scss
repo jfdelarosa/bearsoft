@@ -2,7 +2,6 @@
   background-color: $color;
   border-color: $color;
   color: white;
-  margin: 0 1rem 1rem 0;
   outline: none!important;
   &:hover{
     background-color: darken($color, 10%);
@@ -27,7 +26,7 @@
 }
 
 @mixin transition(){
-  webkit-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
