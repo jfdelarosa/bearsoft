@@ -503,6 +503,7 @@ footer .cover{
   margin:0 1rem;
   position:relative;
   font-weight:600;
+  cursor:pointer;
   transition:all .25s ease-in-out;
 }
 

@@ -5,11 +5,21 @@ var _parallax = require("./modules/parallax");
 
 var _parallax2 = _interopRequireDefault(_parallax);
 
+var _scrollTo = require("./modules/scrollTo");
+
+var _scrollTo2 = _interopRequireDefault(_scrollTo);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _parallax2.default)();
+document.querySelectorAll(".nav__element").forEach(function (el) {
+  el.addEventListener("click", function () {
+    var to = document.querySelector(el.dataset.element);
+    (0, _scrollTo2.default)(to);
+  });
+});
 
-},{"./modules/parallax":2}],2:[function(require,module,exports){
+},{"./modules/parallax":2,"./modules/scrollTo":3}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30,6 +40,33 @@ exports.default = function () {
       }
     });
   });
+};
+
+},{}],3:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (el) {
+  if (el) {
+    var requestAnimFrame = function () {
+      return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (callback) {
+        window.setTimeout(callback, 1000 / 60);
+      };
+    }();
+
+    var i = 0;
+    var pos = el.offsetTop - el.scrollTop + el.clientTop;
+    var animateScroll = function animateScroll() {
+      window.scrollTo(0, i += 40);
+      if (i < pos) {
+        requestAnimFrame(animateScroll);
+      }
+    };
+    animateScroll();
+  }
 };
 
 },{}]},{},[1]);

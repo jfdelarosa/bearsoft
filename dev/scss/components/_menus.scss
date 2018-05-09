@@ -11,6 +11,7 @@
     margin: 0 1rem;
     position: relative;
     font-weight: 600;
+    cursor: pointer;
     @include transition();
     &:hover{
       color: white;

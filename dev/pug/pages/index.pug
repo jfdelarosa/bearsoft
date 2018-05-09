@@ -1,6 +1,6 @@
 extends ../includes/template
 block main
-  .section.quienes-somos
+  .section.about
     .container
       h2.section__title ¿Quiénes somos?
       h3.section__subtitle Acerca de nosotros
@@ -78,5 +78,6 @@ block main
         .form__grid
           input.form__controller(type="text" name="nombre" placeholder="Nombre")
           input.form__controller(type="email" name="correo" placeholder="correo@dominio.com")
+        input.form__controller(type="text" name="asunto" placeholder="Asunto")
         textarea.form__controller(name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="6")
         button.btn.btn-secondary(type="button") Enviar
