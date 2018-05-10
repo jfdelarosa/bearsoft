@@ -1,15 +1,14 @@
 export default (el) => {
-  let form = new FormData(el);
+  let form = {};
   document.querySelectorAll(".form__controller").forEach((el) => {
-    form.append(el.getAttribute('name'), el.value);
+    form[el.getAttribute('name')] = el.value;
   });
-  fetch("/mail.php", {
-      method: "POST",
-      body: form
-  })
-  .then((res) => { return res; })
-  .then((data) => {
-    console.log(data);
-    console.log(JSON.stringify(data));
+  emailjs.send("smtp_server", "bearsoft", form)
+  .then(function(response) {
+    el.reset();
+    alert("¡Mensaje enviado!");
+  }, function(err) {
+    console.log(err);
+    alert("Ocurrió un error al enviar el mensaje");
   });
 }

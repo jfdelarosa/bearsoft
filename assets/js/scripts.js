@@ -23,6 +23,7 @@ document.querySelectorAll(".nav__element").forEach(function (el) {
   });
 });
 
+emailjs.init("user_CfOH4dIY9G8E7IaO0h3tJ");
 document.querySelector(".form").addEventListener("submit", function (e) {
   (0, _form2.default)(e.target);
   e.preventDefault();
@@ -36,18 +37,16 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 exports.default = function (el) {
-  var form = new FormData(el);
+  var form = {};
   document.querySelectorAll(".form__controller").forEach(function (el) {
-    form.append(el.getAttribute('name'), el.value);
+    form[el.getAttribute('name')] = el.value;
   });
-  fetch("/mail.php", {
-    method: "POST",
-    body: form
-  }).then(function (res) {
-    return res;
-  }).then(function (data) {
-    console.log(data);
-    console.log(JSON.stringify(data));
+  emailjs.send("smtp_server", "bearsoft", form).then(function (response) {
+    el.reset();
+    alert("¡Mensaje enviado!");
+  }, function (err) {
+    console.log(err);
+    alert("Ocurrió un error al enviar el mensaje");
   });
 };
 

@@ -10,6 +10,7 @@ document.querySelectorAll(".nav__element").forEach((el) => {
   });
 });
 
+emailjs.init("user_CfOH4dIY9G8E7IaO0h3tJ");
 document.querySelector(".form").addEventListener("submit", (e) => {
   formSubmit(e.target);
   e.preventDefault();
