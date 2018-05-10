@@ -36,7 +36,7 @@ gulp.task('styles', () =>
     .pipe(sass(sassOptions))
     .pipe(postcss(postcssPlugins))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./public/css'))
+    .pipe(gulp.dest('./assets/css'))
     .pipe(server.stream({match: '**/*.css'}))
 );
 
@@ -44,7 +44,7 @@ gulp.task('pug', () =>
   gulp.src('./dev/pug/pages/*.pug')
     .pipe(plumber())
     .pipe(pug())
-    .pipe(gulp.dest('./public'))
+    .pipe(gulp.dest('./'))
 );
 
 gulp.task('scripts', () =>
@@ -59,13 +59,13 @@ gulp.task('scripts', () =>
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./public/js'))
+    .pipe(gulp.dest('./assets/js'))
 );
 
 gulp.task('default', () => {
   server.init({
     server: {
-      baseDir: './public'
+      baseDir: './'
     },
   });
 

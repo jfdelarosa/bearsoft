@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 header{
-  background: linear-gradient(-45deg, rgba($color-primary, 0.8), rgba($color-secondary, 0.8)), url('../assets/bg.jpeg');
+  background: linear-gradient(-45deg, rgba($color-primary, 0.8), rgba($color-secondary, 0.8)), url('../bg.jpeg');
   background-size: cover;
   padding: 5rem 0;
   color: white;
@@ -48,15 +48,15 @@ header{
     padding-top: 3rem;
   }
   &.about .container{
-    background-image: url("../assets/sections/quienes-somos.svg");
+    background-image: url("../sections/quienes-somos.svg");
     background-size: 15rem;
   }
   &.portafolio .container{
-    background-image: url("../assets/sections/responsive.svg");
+    background-image: url("../sections/responsive.svg");
     background-size: 21rem;
   }
   &.contacto .container{
-    background-image: url("../assets/sections/contacto.svg");
+    background-image: url("../sections/contacto.svg");
     background-size: 15rem;
   }
 }
@@ -118,7 +118,7 @@ section{
     }
   }
   &#servicios{
-    background-image: url("../assets/pattern.svg");
+    background-image: url("../pattern.svg");
     background-size: 6rem;
     background-attachment: fixed;
     .container{
@@ -179,7 +179,7 @@ section{
 }
 
 footer{
-  background: url("../assets/footer.jpeg");
+  background: url("../footer.jpeg");
   background-size: cover;
   .cover{
     padding: 6rem 0;
