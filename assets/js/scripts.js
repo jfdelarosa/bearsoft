@@ -44,7 +44,7 @@ exports.default = function (el) {
     method: "POST",
     body: form
   }).then(function (res) {
-    return res.json();
+    return res;
   }).then(function (data) {
     console.log(data);
     console.log(JSON.stringify(data));

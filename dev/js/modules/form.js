@@ -7,7 +7,7 @@ export default (el) => {
       method: "POST",
       body: form
   })
-  .then((res) => { return res.json(); })
+  .then((res) => { return res; })
   .then((data) => {
     console.log(data);
     console.log(JSON.stringify(data));
