@@ -9,6 +9,10 @@ var _scrollTo = require("./modules/scrollTo");
 
 var _scrollTo2 = _interopRequireDefault(_scrollTo);
 
+var _form = require("./modules/form");
+
+var _form2 = _interopRequireDefault(_form);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _parallax2.default)();
@@ -19,7 +23,35 @@ document.querySelectorAll(".nav__element").forEach(function (el) {
   });
 });
 
-},{"./modules/parallax":2,"./modules/scrollTo":3}],2:[function(require,module,exports){
+document.querySelector(".form").addEventListener("submit", function (e) {
+  (0, _form2.default)(e.target);
+  e.preventDefault();
+});
+
+},{"./modules/form":2,"./modules/parallax":3,"./modules/scrollTo":4}],2:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (el) {
+  var form = new FormData(el);
+  document.querySelectorAll(".form__controller").forEach(function (el) {
+    form.append(el.getAttribute('name'), el.value);
+  });
+  fetch("/mail.php", {
+    method: "POST",
+    body: form
+  }).then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    console.log(data);
+    console.log(JSON.stringify(data));
+  });
+};
+
+},{}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -42,7 +74,7 @@ exports.default = function () {
   });
 };
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
