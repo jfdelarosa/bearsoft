@@ -38,8 +38,20 @@
   }
 }
 
+@mixin menus--lg{
+  .nav{
+    flex-direction: row;
+    &__right{
+      margin: 0;
+    }
+  }
+}
 @mixin menus--md{
-  .nav__right{
-    display: block;
+  .nav{
+    flex-direction: column;
+    &__right{
+      margin-top: 1.5rem;
+      display: block;
+    }
   }
 }

@@ -16,10 +16,11 @@ header{
     cursor: pointer;
   }
   h2{
+    @include responsive-font-size(4rem);
     width: 100%;
-    font-size: 2rem;
     font-weight: 600;
     margin: 2rem 0;
+    text-align: center;
   }
   .nav-services{
     display: none;
@@ -49,7 +50,7 @@ section{
   padding: 2rem 0;
   &#about{
     p{
-      font-size: 1.3rem;
+      @include responsive-font-size(1.3rem);
       font-weight: 300;
       line-height: 2rem;
       text-align: justify;
@@ -117,6 +118,9 @@ footer{
 }
 
 @mixin layout--lg(){
+  header h2{
+    width: 50%;
+  }
   .container{
     width: $container-lg;
   }
@@ -129,9 +133,9 @@ footer{
   header{
     padding: 5rem 0;
     h2{
-      width: 50%;
-      font-size: 3rem;
+      width: 60%;
       padding: 5rem 0;
+      text-align: left;
     }
   }
   .container{

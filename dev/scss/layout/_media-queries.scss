@@ -11,4 +11,5 @@
 
 @media (min-width: 1000px) {
   @include layout--lg();
+  @include menus--lg();
 }

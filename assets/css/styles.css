@@ -147,10 +147,17 @@ header img{
 }
 
 header h2{
+  font-size:4rem;
   width:100%;
-  font-size:2rem;
   font-weight:600;
   margin:2rem 0;
+  text-align:center;
+}
+
+@media (max-width:1200px){
+  header h2{
+    font-size:calc(1.6rem + 3.2vw);
+  }
 }
 
 header .nav-services{
@@ -193,6 +200,12 @@ section#about p{
   text-align:justify;
   color:#6c665c;
   margin:0;
+}
+
+@media (max-width:1200px){
+  section#about p{
+    font-size:calc(1.06rem + .32vw);
+  }
 }
 
 section#portafolio .container{
@@ -507,10 +520,23 @@ footer .cover{
   font-size:2rem;
 }
 
+@media (max-width:1200px){
+  .section__title{
+    font-size:calc(1.2rem + 1.06667vw);
+  }
+}
+
 .section__subtitle{
   color:#6c757d;
   font-weight:400;
   margin:0;
+  font-size:1.5rem;
+}
+
+@media (max-width:1200px){
+  .section__subtitle{
+    font-size:calc(1.1rem + .53333vw);
+  }
 }
 
 @media (min-width:480px){
@@ -535,8 +561,8 @@ footer .cover{
     padding:5rem 0;
   }
   header h2{
-    width:50%;
-    font-size:3rem;
+    width:60%;
+    text-align:left;
   }
   .container{
     width:80vw;
@@ -575,7 +601,14 @@ footer .cover{
   footer .cover{
     padding:6rem 0;
   }
+  .nav{
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
+  }
   .nav__right{
+    margin-top:1.5rem;
     display:block;
   }
   .pricing{
@@ -630,12 +663,24 @@ footer .cover{
 }
 
 @media (min-width:1000px){
+  header h2{
+    width:50%;
+  }
   .container{
     width:70vw;
   }
   section#portafolio .container{
     -ms-grid-columns:(1fr)[3];
         grid-template-columns:repeat(3,1fr);
+  }
+  .nav{
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:row;
+            flex-direction:row;
+  }
+  .nav__right{
+    margin:0;
   }
 }
 
