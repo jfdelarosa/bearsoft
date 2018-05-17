@@ -1,11 +1,10 @@
 .container{
-  width: $container-width;
-  margin: 0 auto;
+  padding: 0 2rem;
 }
 header{
   background: linear-gradient(-45deg, rgba($color-primary, 0.8), rgba($color-secondary, 0.8)), url('../bg.jpeg');
   background-size: cover;
-  padding: 5rem 0;
+  padding: 3rem 1rem;
   color: white;
   clip-path: polygon(
     0 0,
@@ -17,13 +16,13 @@ header{
     cursor: pointer;
   }
   h2{
-    width: 50%;
-    font-size: 3rem;
+    width: 100%;
+    font-size: 2rem;
     font-weight: 600;
-    margin: 5rem 0;
+    margin: 2rem 0;
   }
   .nav-services{
-    display: flex;
+    display: none;
     justify-content: center;
     span{
       padding: 0 0.5rem;
@@ -40,33 +39,15 @@ header{
 .section{
   background: $section-bg;
   .container{
-    padding: 4rem 0;
+    padding: 3rem 2rem;
     background-repeat: no-repeat;
     background-position-x: right;
-  }
-  &:first-of-type .container{
-    padding-top: 3rem;
-  }
-  &.about .container{
-    background-image: url("../sections/quienes-somos.svg");
-    background-size: 15rem;
-  }
-  &.portafolio .container{
-    background-image: url("../sections/responsive.svg");
-    background-size: 21rem;
-  }
-  &.contacto .container{
-    background-image: url("../sections/contacto.svg");
-    background-size: 15rem;
   }
 }
 section{
   background: white;
-  padding: 6rem 0;
+  padding: 2rem 0;
   &#about{
-    .container{
-      width: 700px;
-    }
     p{
       font-size: 1.3rem;
       font-weight: 300;
@@ -79,7 +60,7 @@ section{
   &#portafolio{
     .container{
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       grid-gap: 1rem;
       .item{
         position: relative;
@@ -121,60 +102,6 @@ section{
     background-image: url("../pattern.svg");
     background-size: 6rem;
     background-attachment: fixed;
-    .container{
-      width: 700px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .plan{
-        box-shadow: 0 0 27px rgba(0, 0, 0, 0.2);
-        border-radius: 1rem;
-        padding: 3rem 2rem 2rem 2rem;
-        text-align: center;
-        position: relative;
-        background: white;
-        width: 33%;
-        transform: scale(1);
-        @include transition();
-        &:first-of-type{
-          border-radius: 1rem 0 0 1rem;
-        }
-        &:last-of-type{
-          border-radius: 0 1rem 1rem 0;
-        }
-        &:hover{
-          cursor: pointer;
-          transform: scale(1.05);
-        }
-        &.best{
-          width: 34%;
-          z-index: 2;
-        }
-        img{
-          width: 60%;
-        }
-        ul{
-          font-size: 0.8rem;
-          padding-left: $posX * 1rem;
-          li {
-            position: relative;
-            list-style: none;
-            text-align: left;
-            padding: $posY * 0.5rem 0;
-            color: $color-muted;
-            &:after {
-              content:'\2713';
-              color: $color-primary;
-              background-color: transparent;
-              position: absolute;
-              left: $posX * -1rem;
-              top: $posY * 0.6em;
-              font-weight: 600;
-            }
-          }
-        }
-      }
-    }
   }
 }
 
@@ -182,9 +109,79 @@ footer{
   background: url("../footer.jpeg");
   background-size: cover;
   .cover{
-    padding: 6rem 0;
+    padding: 2rem 0;
     background: rgba(0,0,0,.05);
     height: 100%;
     position: relative;
+  }
+}
+
+@mixin layout--lg(){
+  .container{
+    width: $container-lg;
+  }
+  section#portafolio .container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@mixin layout--md{
+  header{
+    padding: 5rem 0;
+    h2{
+      width: 50%;
+      font-size: 3rem;
+      padding: 5rem 0;
+    }
+  }
+  .container{
+    width: $container-md;
+    margin: 0 auto;
+  }
+  .section{
+    .container{
+      padding: 4rem 0;
+      background-position-y: 50%!important;
+      background-size: 15rem;
+    }
+    &:first-of-type .container{
+      padding-top: 3rem;
+    }
+    &.about .container{
+      background-image: url("../sections/quienes-somos.svg");
+      background-size: 15rem;
+    }
+    &.portafolio .container{
+      background-image: url("../sections/responsive.svg");
+      background-size: 21rem;
+    }
+    &.contacto .container{
+      background-image: url("../sections/contacto.svg");
+      background-size: 15rem;
+    }
+  }
+  section{
+    padding: 6rem 0;
+    &#portafolio .container{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  footer .cover{
+    padding: 6rem 0;
+  }
+}
+
+@mixin layout--sm{
+  header .nav-services{
+    display: flex;
+  }
+  .section .container{
+    background: none!important;
+  }
+  section{
+    padding: 2rem 0;
+  }
+  footer .cover{
+    padding: 4rem 0;
   }
 }

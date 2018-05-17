@@ -5,6 +5,9 @@
   &__logo{
     height: 2rem;
   }
+  &__right{
+    display: none;
+  }
   &__element{
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
@@ -32,5 +35,11 @@
       bottom: -0.5rem;
       width: 100%;
     }
+  }
+}
+
+@mixin menus--md{
+  .nav__right{
+    display: block;
   }
 }

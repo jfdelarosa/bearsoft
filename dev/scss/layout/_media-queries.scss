@@ -1,0 +1,14 @@
+@media (min-width: 480px) {
+  @include layout--sm();
+}
+
+@media (min-width: 600px) {
+  @include layout--md();
+  @include menus--md();
+  @include pricing--md();
+  @include form--md();
+}
+
+@media (min-width: 1000px) {
+  @include layout--lg();
+}
