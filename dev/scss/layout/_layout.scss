@@ -51,7 +51,7 @@ section{
     p{
       font-size: 1.3rem;
       font-weight: 300;
-      line-height: 3rem;
+      line-height: 2rem;
       text-align: justify;
       color: #6c665c;
       margin: 0;
@@ -162,6 +162,9 @@ footer{
   }
   section{
     padding: 6rem 0;
+    &#about p{
+      line-height: 3rem;
+    }
     &#portafolio .container{
       grid-template-columns: repeat(2,1fr);
     }
