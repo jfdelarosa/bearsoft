@@ -11,7 +11,10 @@ import babelify from 'babelify';
 import source from 'vinyl-source-stream';
 import sourcemaps from 'gulp-sourcemaps';
 import buffer from 'vinyl-buffer';
+import uglifyes from 'uglify-es';
+import composer from 'gulp-uglify/composer';
 
+const uglify = composer(uglifyes, console);
 const server = browserSync.create();
 
 const postcssPlugins = [
@@ -25,7 +28,7 @@ const postcssPlugins = [
 ];
 
 const sassOptions = {
-  outputStyle: 'expanded',
+  outputStyle: 'compressed',
   includePaths: ['node_modules/normalize.css/']
 };
 
@@ -51,12 +54,9 @@ gulp.task('scripts', () =>
   browserify('./dev/js/index.js')
     .transform(babelify)
     .bundle()
-    .on('error', function(err){
-      console.error(err);
-      this.emit('end')
-    })
     .pipe(source('scripts.js'))
     .pipe(buffer())
+    .pipe(uglify())
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./assets/js'))
