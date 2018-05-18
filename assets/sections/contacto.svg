@@ -5,11 +5,40 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg5614"
    version="1.1"
-   viewBox="0 0 45.11496 47.978653"
-   height="47.978653mm"
-   width="45.11496mm">
+   viewBox="0 0 32.103802 34.141602"
+   height="34.141602mm"
+   width="32.103802mm"
+   sodipodi:docname="contacto.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview67"
+     showgrid="false"
+     viewbox-x="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.3014468"
+     inkscape:cx="-33.457415"
+     inkscape:cy="38.370812"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5614" />
   <defs
      id="defs5608" />
   <metadata
@@ -25,7 +54,7 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(-34.849408,-39.817458)"
+     transform="matrix(0.71159988,0,0,0.71159988,-24.798835,-28.334098)"
      id="layer1">
     <g
        id="g5537"
@@ -36,16 +65,19 @@
         <path
            style="opacity:1;fill:#ffd42a;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 41.452768,117.33098 49.88243,48.38787 H -8.4284891 Z"
-           id="rect2749" />
+           id="rect2749"
+           inkscape:connector-curvature="0" />
         <path
            style="opacity:1;fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:1.04312336;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="M -8.4284902,165.71885 H 91.335199 v 50.26652 H -8.4284902 Z"
-           id="rect2754" />
+           id="rect2754"
+           inkscape:connector-curvature="0" />
       </g>
       <path
          id="rect2737"
          d="M 15.242525,88.583223 H 98.850079 V 174.26983 H 15.242525 Z"
-         style="opacity:1;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:1.1693331;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="opacity:1;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:1.1693331;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
       <g
          transform="translate(18.238782,-41.715529)"
          id="g2962">
@@ -393,11 +425,13 @@
         <path
            style="opacity:1;fill:#ffeeaa;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 91.335198,165.71885 c 0.590917,-0.54197 1.44732,0.64551 1.44732,1.44733 0,19.29736 0,57.89209 0,57.89209 0,0.80182 -0.6455,1.44732 -1.44732,1.44732 H 28.084019 c -0.801821,0 -1.447329,-0.6455 -1.447329,-1.44732 0,0 43.132333,-39.55962 64.698508,-59.33942 z"
-           id="rect2731" />
+           id="rect2731"
+           inkscape:connector-curvature="0" />
         <path
            id="path2735"
            d="m -8.4284891,165.71885 c -0.5909173,-0.54197 -1.44732,0.64551 -1.44732,1.44733 0,19.29736 0,57.89209 0,57.89209 0,0.80182 0.6455,1.44732 1.44732,1.44732 H 54.822692 c 0.801821,0 2.038246,-0.90535 1.447329,-1.44732 z"
-           style="opacity:1;fill:#ffe680;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+           style="opacity:1;fill:#ffe680;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
       </g>
     </g>
   </g>

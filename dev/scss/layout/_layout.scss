@@ -41,10 +41,10 @@ header{
   background: $section-bg;
   .container{
     padding: 3rem 2rem;
-    background-repeat: no-repeat;
-    background-position-x: right;
+    background: none;
   }
 }
+
 section{
   background: white;
   padding: 2rem 0;
@@ -127,6 +127,20 @@ footer{
   section#portafolio .container{
     grid-template-columns: repeat(3, 1fr);
   }
+  .section{
+    &:first-of-type .container{
+      padding-top: 3rem;
+    }
+    &.about .container{
+      background-size: 15rem;
+    }
+    &.portafolio .container{
+      background-size: 21rem;
+    }
+    &.contacto .container{
+      background-size: 12rem;
+    }
+  }
 }
 
 @mixin layout--md{
@@ -145,23 +159,22 @@ footer{
   .section{
     .container{
       padding: 4rem 0;
-      background-position-y: 50%!important;
+      background-position-y: 50%;
       background-size: 15rem;
+      background-repeat: no-repeat;
+      background-position-x: right;
     }
     &:first-of-type .container{
       padding-top: 3rem;
     }
     &.about .container{
       background-image: url("../sections/quienes-somos.svg");
-      background-size: 15rem;
     }
     &.portafolio .container{
       background-image: url("../sections/responsive.svg");
-      background-size: 21rem;
     }
     &.contacto .container{
       background-image: url("../sections/contacto.svg");
-      background-size: 15rem;
     }
   }
   section{
@@ -181,9 +194,6 @@ footer{
 @mixin layout--sm{
   header .nav-services{
     display: flex;
-  }
-  .section .container{
-    background: none!important;
   }
   section{
     padding: 2rem 0;
